@@ -1,0 +1,37 @@
+
+<% if user_signed_in? %>
+  <% content_for :title, "Friends" %>
+
+  <h1>Friends List</h1>
+  <div id="friends">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Name(Last, First)</th>
+          <th>Actions</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <% @friends.each do |friend| %>
+        <% if friend.user == current_user %>
+          <tr>
+            <td><%= friend.last_name + ', ' + friend.first_name %></td>
+            <td>
+                <%= link_to "Details", friend, class: "btn btn-primary btn-sm" %> 
+            </td>
+            
+          </tr>
+        <% end %>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+  <%= link_to "New friend", new_friend_path, class: "btn btn-success" %>
+<% else %>
+  <h1>Hello!</h1>
+  This is a webpage to manage your contacts. 
+  Please Sign up
+
+<% end %>
