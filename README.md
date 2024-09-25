@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This repository contains a in-progress program using Ruby on Rails.
 
-Things you may want to cover:
+* Current Capabilities: Friends list, User sessions
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
+* Ruby version - 3.3.5
 
 * Deployment instructions
+  - Rails s
+  - Go to http://127.0.0.1:3000/ on browser
 
-* ...
+* Future Design
+  - Stock info
+  - User search history
+  - Connect with backend Data Analysis
